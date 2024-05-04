@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 export default function Document() {
   const meta = {
     title: 'Arghyadeep Majumder - Software Engineer | 5+ years of experience',
-    description: 'Software Engineer with 5+ years of experience. I mostly contribute to React & NodeJS. Tech stack I have worked on includes JavaScript, HTML, CSS, ReactJS, Redux, GraphQL, PWA, Web APIs, NodeJS, MongoDB, Redis, etc.',
+    description: '5+ years of experience of building and shipping features. Currently writing code for scale of 600K users. Tech literacy in Javascript. Handling E2E development cycle and contributing to 4-5 micro-services.',
     image: '/dp.jpeg'
   }
 
