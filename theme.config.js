@@ -3,6 +3,10 @@ const YEAR = new Date().getFullYear()
 export default {
   darkMode: true,
   defaultTheme: 'dark',
+  nextThemes: {
+    defaultTheme: 'dark',
+    forcedTheme: 'dark',
+  },
   footer: (
     <small
       style={{
