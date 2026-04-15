@@ -224,6 +224,10 @@ export const SITE_CONTENT: SiteContent = {
       linkSource: "https://github.com/argodeep?tab=repositories",
     },
   ],
+  consulting: {
+    description: "Available for consulting on product architecture and Senior/Staff IC career paths.",
+    availability: "Select engagements",
+  },
   about: {
     description: `
       Outside my role, I help teams and engineers with architecture reviews, career guidance and practical advice on growing as a hands-on engineer. I'm available for consulting on product architecture and Senior/Staff IC career paths.

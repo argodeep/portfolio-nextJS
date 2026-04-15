@@ -20,6 +20,7 @@ export default defineConfig({
     },
   ],
   vite: {
+    // @ts-ignore - tailwindcss vite plugin type compatibility
     plugins: [tailwindcss()],
   },
 });
