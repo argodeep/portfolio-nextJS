@@ -2,166 +2,296 @@
 title: Arghyadeep Majumder | Senior Engineer & Solution Architect
 ---
 
-<style>{`@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap');
-/* DESIGN TOKENS */
+<style>{`
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap');
+
+/* ── TOKENS ── */
 :root {
-  --color-bg:             #f5f0e8;
-  --color-surface:        #ede8df;
-  --color-surface-2:      #e6e1d8;
-  --color-border:         rgba(40,30,15,0.12);
-  --color-divider:        rgba(40,30,15,0.10);
-  --color-text:           #1a1510;
-  --color-text-muted:     #6b6155;
-  --color-text-faint:     #a89e90;
-  --color-accent:         #c85a00;
-  --font-display: 'Instrument Serif', Georgia, serif;
-  --font-body:    'Inter', 'Helvetica Neue', sans-serif;
-  --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
-  --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
-  --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
-  --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
-  --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
-  --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
-  --text-hero: clamp(2.8rem,   1rem    + 5.5vw,  6rem);
+  --color-bg:       #0e141b;
+  --color-surface:  #131920;
+  --color-surface-2:#161e26;
+  --color-border:   rgba(226,232,240,0.10);
+  --color-divider:  rgba(226,232,240,0.08);
+  --color-text:     #e2e8f0;
+  --color-muted:    #94a3b8;
+  --color-faint:    #4a5568;
+  --color-primary:  #2563eb;
+  --font-serif:     'Gabarito', sans-serif;
+  --font-sans:      'Be Vietnam Pro', sans-serif;
   --space-1:0.25rem;--space-2:0.5rem;--space-3:0.75rem;
   --space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;
   --space-8:2rem;--space-10:2.5rem;--space-12:3rem;
   --space-16:4rem;--space-20:5rem;--space-24:6rem;
-  --radius-sm:0.25rem;--radius-md:0.5rem;--radius-lg:0.75rem;
-  --transition:200ms cubic-bezier(0.16,1,0.3,1);
-  --content-wide:1200px;
+  --radius-sm:0.375rem;--radius-md:0.5rem;--radius-lg:0.75rem;--radius-full:9999px;
+  --transition:180ms cubic-bezier(0.16,1,0.3,1);
+  --max-w:48rem;
 }
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-padding-top:80px;}
-body{font-family:var(--font-body);font-size:var(--text-base);color:var(--color-text);background:var(--color-bg);line-height:1.65;min-height:100dvh;}
+body{font-family:var(--font-sans);color:var(--color-text);background:var(--color-bg);line-height:1.65;min-height:100dvh;}
 img{display:block;max-width:100%;height:auto;}
-p,li{text-wrap:pretty;max-width:70ch;}
-h1,h2,h3,h4{text-wrap:balance;line-height:1.15;}
+p,li{text-wrap:pretty;max-width:72ch;}
+h1,h2,h3,h4{text-wrap:balance;line-height:1.1;}
 a{color:inherit;text-decoration:none;transition:color var(--transition);}
-a:hover{color:var(--color-accent);}
 button{cursor:pointer;background:none;border:none;font:inherit;color:inherit;}
-::selection{background:rgba(200,90,0,0.15);color:var(--color-text);}
-:focus-visible{outline:2px solid var(--color-accent);outline-offset:3px;border-radius:var(--radius-sm);}
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(245,240,232,0.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--color-border);}
-.nav-inner{max-width:var(--content-wide);margin-inline:auto;padding:var(--space-4) var(--space-6);display:flex;align-items:center;justify-content:space-between;}
-.nav-logo{font-family:var(--font-display);font-size:var(--text-base);font-weight:400;letter-spacing:-0.01em;color:var(--color-text);}
-.nav-links{display:flex;gap:var(--space-8);list-style:none;}
-.nav-links a{font-size:var(--text-sm);color:var(--color-text-muted);transition:color var(--transition);font-weight:400;}
+::selection{background:rgba(37,99,235,0.25);color:var(--color-text);}
+:focus-visible{outline:2px solid var(--color-primary);outline-offset:3px;border-radius:var(--radius-sm);}
+
+/* ── NAV ── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(14,20,27,0.88);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--color-border);
+}
+.nav-inner{
+  max-width:var(--max-w);margin-inline:auto;
+  padding:var(--space-4) var(--space-5);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.nav-logo{
+  font-family:var(--font-serif);font-size:1rem;font-weight:700;
+  letter-spacing:-0.5px;color:var(--color-text);
+}
+.nav-links{display:flex;gap:var(--space-6);list-style:none;}
+.nav-links a{font-size:0.875rem;color:var(--color-muted);font-weight:400;transition:color var(--transition);}
 .nav-links a:hover{color:var(--color-text);}
-.nav-cta{font-size:var(--text-sm);font-weight:500;color:var(--color-text);border:1px solid var(--color-border);padding:var(--space-2) var(--space-5);border-radius:var(--radius-sm);transition:background var(--transition),border-color var(--transition);}
-.nav-cta:hover{background:var(--color-surface);border-color:rgba(40,30,15,0.22);}
+.nav-cta{
+  font-size:0.875rem;font-weight:500;color:#fff;
+  background:var(--color-primary);
+  padding:var(--space-2) var(--space-5);
+  border-radius:var(--radius-full);
+  transition:opacity var(--transition);
+}
+.nav-cta:hover{opacity:0.88;color:#fff;}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;padding:var(--space-2);}
-.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--color-text);}
-.nav-mobile-menu{display:none;position:fixed;inset:0;top:61px;background:var(--color-bg);z-index:99;padding:var(--space-8) var(--space-6);flex-direction:column;gap:var(--space-6);}
+.nav-hamburger span{display:block;width:20px;height:1.5px;background:var(--color-muted);}
+.nav-mobile-menu{
+  display:none;position:fixed;inset:0;top:61px;
+  background:var(--color-bg);z-index:99;
+  padding:var(--space-8) var(--space-5);
+  flex-direction:column;gap:var(--space-6);
+  border-top:1px solid var(--color-border);
+}
 .nav-mobile-menu.open{display:flex;}
-.nav-mobile-menu a{font-size:var(--text-xl);font-family:var(--font-display);font-style:italic;color:var(--color-text);border-bottom:1px solid var(--color-divider);padding-bottom:var(--space-5);}
-/* HERO */
-.port-hero{padding-top:120px;padding-bottom:var(--space-24);padding-inline:var(--space-6);max-width:var(--content-wide);margin-inline:auto;}
-.hero-eyebrow{font-size:var(--text-xs);font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:var(--space-6);}
-.hero-grid{display:grid;grid-template-columns:1fr 360px;gap:var(--space-16);align-items:start;}
-.hero-headline{font-family:var(--font-display);font-size:var(--text-hero);font-weight:400;font-style:italic;line-height:1.05;letter-spacing:-0.02em;color:var(--color-text);margin-bottom:var(--space-8);}
-.hero-headline em{font-style:normal;}
-.hero-body{display:flex;flex-direction:column;gap:var(--space-5);}
-.hero-body p{font-size:var(--text-lg);color:var(--color-text-muted);line-height:1.65;max-width:58ch;}
-.hero-body p strong{color:var(--color-text);font-weight:500;}
-.hero-body p:first-child{color:var(--color-text);font-weight:400;}
-.hero-actions{display:flex;gap:var(--space-4);margin-top:var(--space-4);flex-wrap:wrap;}
-.btn-primary{display:inline-flex;align-items:center;gap:var(--space-2);font-size:var(--text-sm);font-weight:500;color:#f5f0e8;background:var(--color-text);padding:var(--space-3) var(--space-6);border-radius:var(--radius-sm);transition:background var(--transition);}
-.btn-primary:hover{background:#2e2820;color:#f5f0e8;}
-.btn-secondary{display:inline-flex;align-items:center;gap:var(--space-2);font-size:var(--text-sm);font-weight:400;color:var(--color-text);border:1px solid var(--color-border);padding:var(--space-3) var(--space-6);border-radius:var(--radius-sm);transition:background var(--transition),border-color var(--transition);}
-.btn-secondary:hover{background:var(--color-surface);border-color:rgba(40,30,15,0.22);color:var(--color-text);}
-.hero-profile{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);overflow:hidden;position:sticky;top:100px;}
-.hero-profile-img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top center;display:block;}
-.hero-profile-meta{padding:var(--space-5);display:flex;flex-direction:column;gap:var(--space-2);border-top:1px solid var(--color-border);}
-.hero-profile-name{font-family:var(--font-display);font-size:var(--text-lg);font-weight:400;color:var(--color-text);}
-.hero-profile-role{font-size:var(--text-xs);color:var(--color-text-muted);letter-spacing:0.04em;line-height:1.6;}
-.hero-profile-links{display:flex;gap:var(--space-4);margin-top:var(--space-1);}
-.hero-profile-links a{font-size:var(--text-xs);color:var(--color-text-muted);font-weight:500;border-bottom:1px solid var(--color-divider);padding-bottom:1px;transition:color var(--transition),border-color var(--transition);}
-.hero-profile-links a:hover{color:var(--color-accent);border-color:var(--color-accent);}
-/* SECTION */
-.section-divider{max-width:var(--content-wide);margin-inline:auto;padding-inline:var(--space-6);}
-.section-divider hr{border:none;border-top:1px solid var(--color-divider);}
-.port-section{padding-block:clamp(var(--space-16),7vw,var(--space-24));padding-inline:var(--space-6);max-width:var(--content-wide);margin-inline:auto;}
-.section-label{font-size:var(--text-xs);font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:var(--space-10);}
-/* HOW I WORK */
-.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16);align-items:start;}
-.how-heading{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:400;font-style:italic;line-height:1.1;letter-spacing:-0.02em;color:var(--color-text);}
-.how-body{display:flex;flex-direction:column;gap:var(--space-5);}
-.how-body p{font-size:var(--text-base);color:var(--color-text-muted);line-height:1.75;}
-.how-body p strong{color:var(--color-text);font-weight:500;}
-/* BUILD */
-.build-section{background:var(--color-surface);border-radius:var(--radius-lg);padding:var(--space-12);}
-.build-text{font-size:var(--text-lg);font-family:var(--font-display);font-style:italic;color:var(--color-text-muted);line-height:1.6;max-width:60ch;margin-bottom:var(--space-8);}
-.build-text strong{color:var(--color-text);font-style:normal;font-family:var(--font-body);font-weight:500;}
-.tags{display:flex;flex-wrap:wrap;gap:var(--space-2);}
-.tag{font-size:var(--text-xs);font-weight:500;letter-spacing:0.04em;color:var(--color-text-muted);border:1px solid var(--color-border);padding:var(--space-1) var(--space-3);border-radius:var(--radius-sm);background:var(--color-bg);}
-/* IMPACT */
-.impact-list{display:grid;gap:0;border-top:1px solid var(--color-divider);}
-.impact-item{display:grid;grid-template-columns:2rem 1fr;gap:var(--space-6);padding:var(--space-8) 0;border-bottom:1px solid var(--color-divider);align-items:start;}
-.impact-num{font-family:var(--font-display);font-size:var(--text-base);font-style:italic;color:var(--color-text-faint);padding-top:3px;}
-.impact-text{font-size:var(--text-base);color:var(--color-text-muted);line-height:1.75;}
+.nav-mobile-menu a{font-size:1.5rem;font-family:var(--font-serif);font-weight:700;color:var(--color-text);border-bottom:1px solid var(--color-divider);padding-bottom:var(--space-5);}
+
+/* ── PAGE WRAPPER ── */
+.page-wrap{max-width:var(--max-w);margin-inline:auto;padding-inline:var(--space-5);}
+
+/* ── HERO ── */
+.port-hero{padding-top:120px;padding-bottom:var(--space-24);}
+.hero-name{
+  font-family:var(--font-serif);
+  font-size:clamp(3.75rem,10vw,6rem);
+  font-weight:900;
+  letter-spacing:-2px;
+  color:var(--color-text);
+  margin-bottom:var(--space-2);
+  line-height:1;
+}
+.hero-specialty{
+  font-family:var(--font-serif);
+  font-size:clamp(1.75rem,5vw,3rem);
+  font-weight:800;
+  letter-spacing:-1px;
+  color:var(--color-primary);
+  margin-bottom:var(--space-8);
+  line-height:1.1;
+}
+.hero-summary{
+  font-size:1.125rem;
+  color:var(--color-muted);
+  line-height:1.75;
+  max-width:55ch;
+  margin-bottom:var(--space-10);
+}
+.hero-summary strong{color:var(--color-text);font-weight:500;}
+.hero-cta{
+  display:inline-block;
+  font-family:var(--font-sans);
+  font-size:0.9375rem;
+  font-weight:500;
+  color:#fff;
+  background:var(--color-primary);
+  padding:var(--space-4) var(--space-8);
+  border-radius:var(--radius-full);
+  transition:opacity var(--transition);
+}
+.hero-cta:hover{opacity:0.85;color:#fff;}
+.hero-links{display:flex;align-items:center;gap:var(--space-6);flex-wrap:wrap;}
+.hero-link-plain{font-size:0.875rem;color:var(--color-muted);font-weight:400;transition:color var(--transition);}
+.hero-link-plain:hover{color:var(--color-text);}
+
+/* ── SECTION ── */
+.port-section{padding-block:var(--space-24);}
+.section-heading{
+  font-family:var(--font-serif);
+  font-size:clamp(2rem,5vw,2.75rem);
+  font-weight:800;
+  letter-spacing:-1px;
+  color:var(--color-text);
+  margin-bottom:var(--space-12);
+}
+.section-divider{border:none;border-top:1px solid var(--color-divider);margin-block:0;}
+
+/* ── WORK / HOW I WORK ── */
+.how-body p{font-size:1rem;color:var(--color-muted);line-height:1.8;margin-bottom:var(--space-5);}
+.how-body p:last-child{margin-bottom:0;}
+.how-body strong{color:var(--color-text);font-weight:500;}
+
+/* ── TAGS ── */
+.tags{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-8);}
+.tag{
+  font-size:0.8125rem;font-weight:500;letter-spacing:0.02em;
+  color:var(--color-muted);
+  border:1px solid var(--color-border);
+  padding:var(--space-1) var(--space-3);
+  border-radius:var(--radius-full);
+}
+
+/* ── IMPACT ── */
+.impact-list{border-top:1px solid var(--color-divider);}
+.impact-item{
+  display:grid;grid-template-columns:2.5rem 1fr;gap:var(--space-6);
+  padding:var(--space-8) 0;border-bottom:1px solid var(--color-divider);
+  align-items:start;
+}
+.impact-num{font-family:var(--font-serif);font-size:1rem;font-weight:700;color:var(--color-faint);padding-top:2px;}
+.impact-text{font-size:1rem;color:var(--color-muted);line-height:1.8;}
 .impact-text strong{color:var(--color-text);font-weight:500;}
-/* AI STORY */
-.ai-section{background:var(--color-text);color:var(--color-bg);border-radius:var(--radius-lg);padding:var(--space-12);}
-.ai-label{font-size:var(--text-xs);font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,232,0.45);margin-bottom:var(--space-6);}
-.ai-quote{font-family:var(--font-display);font-size:var(--text-xl);font-style:italic;color:var(--color-bg);line-height:1.3;margin-bottom:var(--space-8);max-width:50ch;letter-spacing:-0.01em;}
-.ai-body{font-size:var(--text-base);color:rgba(245,240,232,0.7);line-height:1.8;max-width:65ch;margin-bottom:var(--space-10);}
-.ai-body strong{color:var(--color-bg);font-weight:500;}
-.ai-body em{font-style:italic;color:rgba(245,240,232,0.85);}
-.ai-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(245,240,232,0.12);border:1px solid rgba(245,240,232,0.12);border-radius:var(--radius-md);overflow:hidden;margin-bottom:var(--space-8);}
-.ai-metric{background:rgba(245,240,232,0.04);padding:var(--space-6);}
-.ai-metric-val{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:400;color:var(--color-bg);line-height:1;margin-bottom:var(--space-2);letter-spacing:-0.02em;}
-.ai-metric-label{font-size:var(--text-xs);color:rgba(245,240,232,0.45);letter-spacing:0.06em;text-transform:uppercase;font-weight:500;}
-.ai-footnote{font-size:var(--text-xs);color:rgba(245,240,232,0.35);line-height:1.6;}
-/* PROJECTS */
-.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-4);}
-.project-card{border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-6);background:var(--color-surface);transition:border-color var(--transition),background var(--transition);display:flex;flex-direction:column;gap:var(--space-3);}
-.project-card:hover{border-color:rgba(40,30,15,0.25);background:var(--color-surface-2);}
-.project-title{font-size:var(--text-base);font-weight:500;color:var(--color-text);}
-.project-desc{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;flex:1;max-width:none;}
-.project-link{font-size:var(--text-xs);font-weight:500;color:var(--color-text-muted);display:inline-flex;align-items:center;gap:var(--space-1);margin-top:var(--space-2);border-bottom:1px solid var(--color-divider);padding-bottom:1px;width:fit-content;transition:color var(--transition),border-color var(--transition);}
-.project-link:hover{color:var(--color-accent);border-color:var(--color-accent);}
-.project-card-wide{grid-column:1 / -1;}
-/* RECOGNITION */
-.recognition-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--color-divider);}
-.recognition-item{display:grid;grid-template-columns:1fr auto;gap:var(--space-6);align-items:baseline;padding:var(--space-6) 0;border-bottom:1px solid var(--color-divider);}
-.recognition-title{font-size:var(--text-base);font-weight:500;color:var(--color-text);margin-bottom:var(--space-1);}
-.recognition-org{font-size:var(--text-sm);color:var(--color-text-muted);}
-.recognition-badge{font-size:var(--text-xs);font-weight:500;color:var(--color-text-muted);background:var(--color-surface);border:1px solid var(--color-border);padding:var(--space-1) var(--space-3);border-radius:var(--radius-sm);white-space:nowrap;}
-/* CONSULTING */
-.consulting-inner{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16);align-items:start;}
-.consulting-heading{font-family:var(--font-display);font-size:var(--text-2xl);font-style:italic;font-weight:400;line-height:1.15;letter-spacing:-0.02em;color:var(--color-text);}
-.consulting-body{display:flex;flex-direction:column;gap:var(--space-5);}
-.consulting-body p{font-size:var(--text-base);color:var(--color-text-muted);line-height:1.75;}
-/* FOOTER */
-.port-footer{border-top:1px solid var(--color-divider);padding:var(--space-10) var(--space-6);}
-.footer-inner{max-width:var(--content-wide);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-4);}
-.footer-name{font-family:var(--font-display);font-size:var(--text-base);font-style:italic;color:var(--color-text-muted);}
+
+/* ── AI STORY ── */
+.ai-section{
+  background:var(--color-surface);
+  border:1px solid var(--color-border);
+  border-radius:var(--radius-lg);
+  padding:var(--space-12);
+}
+.ai-label{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-faint);margin-bottom:var(--space-5);}
+.ai-quote{
+  font-family:var(--font-serif);
+  font-size:clamp(1.25rem,3vw,1.75rem);
+  font-weight:800;
+  color:var(--color-text);
+  line-height:1.25;
+  margin-bottom:var(--space-8);
+  letter-spacing:-0.5px;
+  max-width:42ch;
+}
+.ai-body{font-size:1rem;color:var(--color-muted);line-height:1.85;margin-bottom:var(--space-10);max-width:60ch;}
+.ai-body strong{color:var(--color-text);font-weight:500;}
+.ai-body em{font-style:italic;color:rgba(226,232,240,0.75);}
+.ai-metrics{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--color-border);
+  border:1px solid var(--color-border);
+  border-radius:var(--radius-md);overflow:hidden;margin-bottom:var(--space-8);
+}
+.ai-metric{background:var(--color-bg);padding:var(--space-6);}
+.ai-metric-val{
+  font-family:var(--font-serif);
+  font-size:clamp(1.5rem,3vw,2rem);
+  font-weight:900;letter-spacing:-1px;
+  color:var(--color-text);line-height:1;margin-bottom:var(--space-2);
+}
+.ai-metric-label{font-size:0.75rem;color:var(--color-faint);letter-spacing:0.06em;text-transform:uppercase;font-weight:500;}
+.ai-footnote{font-size:0.75rem;color:var(--color-faint);line-height:1.65;}
+
+/* ── PROJECTS ── */
+.projects-list{display:flex;flex-direction:column;border-top:1px solid var(--color-divider);}
+.project-item{
+  display:grid;grid-template-columns:1fr auto;
+  gap:var(--space-6);align-items:start;
+  padding:var(--space-8) 0;border-bottom:1px solid var(--color-divider);
+  text-decoration:none;
+}
+a.project-item:hover .project-title{color:var(--color-primary);}
+.project-title{font-family:var(--font-serif);font-size:1.125rem;font-weight:700;color:var(--color-text);margin-bottom:var(--space-2);transition:color var(--transition);}
+.project-desc{font-size:0.9375rem;color:var(--color-muted);line-height:1.7;}
+.project-arrow{font-size:1.25rem;color:var(--color-faint);align-self:center;flex-shrink:0;}
+
+/* ── RECOGNITION ── */
+.recognition-list{border-top:1px solid var(--color-divider);}
+.recognition-item{
+  display:flex;justify-content:space-between;align-items:start;
+  gap:var(--space-6);padding:var(--space-7) 0;
+  border-bottom:1px solid var(--color-divider);
+}
+.recognition-title{font-family:var(--font-serif);font-size:1rem;font-weight:700;color:var(--color-text);margin-bottom:var(--space-1);}
+.recognition-org{font-size:0.875rem;color:var(--color-muted);}
+.recognition-badge{
+  font-size:0.75rem;font-weight:500;white-space:nowrap;
+  color:var(--color-muted);
+  border:1px solid var(--color-border);
+  padding:var(--space-1) var(--space-3);
+  border-radius:var(--radius-full);
+  flex-shrink:0;
+}
+
+/* ── CONSULTING ── */
+.consulting-body p{font-size:1rem;color:var(--color-muted);line-height:1.8;margin-bottom:var(--space-5);}
+.consulting-body p strong{color:var(--color-text);font-weight:500;}
+.cta-row{display:flex;gap:var(--space-4);flex-wrap:wrap;margin-top:var(--space-6);}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:var(--space-2);
+  font-size:0.9375rem;font-weight:500;color:#fff;
+  background:var(--color-primary);
+  padding:var(--space-4) var(--space-8);
+  border-radius:var(--radius-full);
+  transition:opacity var(--transition);
+}
+.btn-primary:hover{opacity:0.85;color:#fff;}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:var(--space-2);
+  font-size:0.9375rem;font-weight:400;color:var(--color-muted);
+  padding:var(--space-4) var(--space-8);
+  border-radius:var(--radius-full);
+  border:1px solid var(--color-border);
+  transition:color var(--transition),border-color var(--transition);
+}
+.btn-ghost:hover{color:var(--color-text);border-color:rgba(226,232,240,0.22);}
+
+/* ── PHOTO (polaroid) ── */
+.photo-wrap{
+  display:flex;justify-content:flex-start;
+  margin-bottom:var(--space-10);
+}
+.polaroid{
+  background:#fff;
+  padding:var(--space-3) var(--space-3) var(--space-8);
+  box-shadow:0 4px 24px rgba(0,0,0,0.4);
+  transform:rotate(3deg);
+  width:160px;flex-shrink:0;
+}
+.polaroid img{width:100%;height:160px;object-fit:cover;object-position:top center;display:block;}
+
+/* ── FOOTER ── */
+.port-footer{border-top:1px solid var(--color-divider);padding:var(--space-12) var(--space-5);}
+.footer-inner{max-width:var(--max-w);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-4);}
+.footer-name{font-family:var(--font-serif);font-size:0.9375rem;font-weight:700;color:var(--color-muted);}
 .footer-links{display:flex;gap:var(--space-6);list-style:none;}
-.footer-links a{font-size:var(--text-sm);color:var(--color-text-muted);transition:color var(--transition);}
+.footer-links a{font-size:0.875rem;color:var(--color-muted);transition:color var(--transition);}
 .footer-links a:hover{color:var(--color-text);}
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(18px);transition:opacity 0.6s ease,transform 0.6s ease;}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
-/* RESPONSIVE */
-@media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr;}
-  .hero-profile{position:static;order:-1;max-width:280px;}
-  .how-grid{grid-template-columns:1fr;gap:var(--space-8);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:640px){
+  .page-wrap{padding-inline:var(--space-4);}
+  .nav-inner{padding-inline:var(--space-4);}
   .ai-metrics{grid-template-columns:1fr;}
-  .consulting-inner{grid-template-columns:1fr;gap:var(--space-8);}
-  .projects-grid{grid-template-columns:1fr;}
-  .project-card-wide{grid-column:1;}
+  .ai-section{padding:var(--space-8);}
   .nav-links,.nav-cta{display:none;}
   .nav-hamburger{display:flex;}
-  .recognition-item{grid-template-columns:1fr;}
-  .ai-section,.build-section{padding:var(--space-8);}
-}
-@media(max-width:480px){
-  .port-section,.port-hero{padding-inline:var(--space-4);}
-  .nav-inner{padding-inline:var(--space-4);}
-  .hero-actions{flex-direction:column;align-items:flex-start;}
+  .recognition-item{flex-direction:column;}
+  .cta-row{flex-direction:column;}
+  .project-item{grid-template-columns:1fr;}
+  .project-arrow{display:none;}
 }
 @media(prefers-reduced-motion:reduce){
   .reveal{opacity:1;transform:none;transition:none;}
@@ -170,7 +300,7 @@ button{cursor:pointer;background:none;border:none;font:inherit;color:inherit;}
 
 <nav className="nav">
   <div className="nav-inner">
-    <a href="#" className="nav-logo">Arghyadeep Majumder</a>
+    <a href="#" className="nav-logo">A.M.</a>
     <ul className="nav-links">
       <li><a href="#work">Work</a></li>
       <li><a href="#ai-story">AI Story</a></li>
@@ -190,54 +320,36 @@ button{cursor:pointer;background:none;border:none;font:inherit;color:inherit;}
   <a href="https://www.linkedin.com/in/argodeep" target="_blank" rel="noopener noreferrer">Connect ↗</a>
 </div>
 
-<section className="port-hero">
-  <p className="hero-eyebrow reveal">Senior Engineer &amp; Solution Architect</p>
-  <div className="hero-grid">
-    <div>
-      <h1 className="hero-headline reveal">I care about<br />what I build —<br /><em>and I try to<br />build it well.</em></h1>
-      <div className="hero-body reveal">
-        <p>I have <strong>7+ years</strong> of experience designing and shipping products end to end, in production. From microservices to React &amp; React Native frontends — for <strong>millions of users</strong> across global enterprises and clients. Every layer, every cycle.</p>
-        <p>Currently building <strong>Empuls</strong>, Xoxoday's employee engagement platform — across surveys, rewards, wellness, and mobile — using <strong>AI tools as force multipliers</strong> to ship faster without compromising quality.</p>
-        <div className="hero-actions">
-          <a href="#work" className="btn-primary">See my work →</a>
-          <a href="https://github.com/argodeep" target="_blank" rel="noopener noreferrer" className="btn-secondary">GitHub ↗</a>
-        </div>
+<div className="page-wrap">
+
+  <section className="port-hero" id="hero">
+    <div className="photo-wrap reveal">
+      <div className="polaroid">
+        <img src="/dp.jpeg" alt="Arghyadeep Majumder" loading="eager" />
       </div>
     </div>
-    <div className="hero-profile reveal">
-      <img src="/dp.jpeg" alt="Arghyadeep Majumder" className="hero-profile-img" loading="eager" />
-      <div className="hero-profile-meta">
-        <div className="hero-profile-name">Arghyadeep Majumder</div>
-        <div className="hero-profile-role">Senior Engineer · Solution Architect<br />Full-Stack · AI-Augmented</div>
-        <div className="hero-profile-links">
-          <a href="https://twitter.com/argodeep" target="_blank" rel="noopener noreferrer">Twitter</a>
-          <a href="https://github.com/argodeep" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/argodeep" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
-      </div>
+    <h1 className="hero-name reveal">Arghyadeep<br />Majumder</h1>
+    <p className="hero-specialty reveal">Senior Engineer &<br />Solution Architect</p>
+    <p className="hero-summary reveal">
+      <strong>7+ years</strong> designing and shipping products end to end — from microservices to React & React Native frontends — for <strong>600K+ users</strong> across <strong>1000+ global clients</strong>. Every layer, every cycle.
+    </p>
+    <div className="hero-links reveal">
+      <a href="#work" className="hero-cta">See my work →</a>
+      <a href="https://github.com/argodeep" target="_blank" rel="noopener noreferrer" className="hero-link-plain">GitHub ↗</a>
+      <a href="https://twitter.com/argodeep" target="_blank" rel="noopener noreferrer" className="hero-link-plain">Twitter ↗</a>
     </div>
-  </div>
-</section>
+  </section>
 
-<div className="section-divider"><hr /></div>
+  <hr className="section-divider" />
 
-<section className="port-section" id="work">
-  <p className="section-label reveal">How I work</p>
-  <div className="how-grid">
-    <h2 className="how-heading reveal">Senior Engineer &amp; Solution Architect</h2>
+  <section className="port-section" id="work">
+    <h2 className="section-heading reveal">Work Experience</h2>
     <div className="how-body reveal">
-      <p>I own problems end to end: clarifying ambiguous product requirements, designing the system, and shepherding features from design docs into production. Over the last <strong>7+ years</strong>, I've been building and evolving engagement products at scale, balancing reliability, UX, and delivery speed for enterprise customers.</p>
-      <p>Day to day, that means defining service boundaries, shaping APIs that work well for both web and mobile, and tightening feedback loops with observability, CI/CD, and close collaboration with design and customer-facing teams. I care less about buzzwords and more about whether what we ship actually moves metrics and feels right to the people using it.</p>
+      <p>I own problems end to end: clarifying ambiguous product requirements, designing the system, and shepherding features from design docs into production. Over the last <strong>7+ years</strong>, I've been building and evolving engagement products at scale — balancing reliability, UX, and delivery speed for enterprise customers.</p>
+      <p>Day to day, that means defining service boundaries, shaping APIs that work well for both web and mobile, and tightening feedback loops with observability, CI/CD, and close collaboration with design and customer-facing teams. I care less about buzzwords and more about whether what we ship actually moves metrics.</p>
+      <p>Currently building <strong>Empuls</strong>, Xoxoday's employee engagement platform — across surveys, rewards, wellness, and mobile — using <strong>AI tools as force multipliers</strong> to ship faster without compromising quality.</p>
     </div>
-  </div>
-</section>
-
-<div className="section-divider"><hr /></div>
-
-<section className="port-section">
-  <div className="build-section reveal">
-    <p className="build-text">I work on core engagement experiences — <strong>surveys, rewards, social, wellness,</strong> and cross-platform flows — for large enterprises, from backend microservices and data pipelines to <strong>React / React Native</strong> frontends.</p>
-    <div className="tags">
+    <div className="tags reveal">
       <span className="tag">React</span>
       <span className="tag">React Native</span>
       <span className="tag">Node.js</span>
@@ -251,124 +363,133 @@ button{cursor:pointer;background:none;border:none;font:inherit;color:inherit;}
       <span className="tag">AWS</span>
       <span className="tag">System Design</span>
     </div>
-  </div>
-</section>
+  </section>
 
-<div className="section-divider"><hr /></div>
+  <hr className="section-divider" />
 
-<section className="port-section">
-  <p className="section-label reveal">A few impact stories</p>
-  <div className="impact-list">
-    <div className="impact-item reveal">
-      <span className="impact-num">01</span>
-      <p className="impact-text">Led a <strong>3-month migration</strong> of a production mobile app from Flutter to React Native (Expo + Hermes) with a 2-developer team — migrating 1000+ files and 500+ components, using AI tooling to replace months of manual engineering work.</p>
-    </div>
-    <div className="impact-item reveal">
-      <span className="impact-num">02</span>
-      <p className="impact-text">Owned a <strong>large-scale survey stack for 4+ years</strong> — from microservices and MongoDB pipelines to UI, reliably handling 100K+ survey users and high-volume response processing as adoption grew.</p>
-    </div>
-    <div className="impact-item reveal">
-      <span className="impact-num">03</span>
-      <p className="impact-text">Helped shape engagement experiences across surveys, rewards, social, wellness, and mobile — working closely with product, design, and customer teams to ship the <strong>right abstractions</strong>, not just close tickets.</p>
-    </div>
-    <div className="impact-item reveal">
-      <span className="impact-num">04</span>
-      <p className="impact-text">Built a <strong>collaborative online interview platform in 3 weeks</strong> during COVID — with shared cursors, WebRTC audio/video, live chat, and automatic test-case validation. Used by companies for real technical hiring.</p>
-    </div>
-  </div>
-</section>
-
-<div className="section-divider"><hr /></div>
-
-<section className="port-section" id="ai-story">
-  <div className="ai-section reveal">
-    <p className="ai-label">AI Adoption Story</p>
-    <p className="ai-quote">Ranked #1 on my org's AI usage leaderboard out of 91 engineers.</p>
-    <p className="ai-body">When AI coding tools rolled out across the org, most engineers tried them. I committed to making AI a daily collaborator — not a shortcut, but a <em>thinking partner</em> across architecture, code reviews, debugging, and migrations. The discipline of prompt crafting, context window management, and knowing <em>when not to trust the model</em> started compounding — I was shipping more, faster, without cutting corners on quality. Accepted diffs climbed because the suggestions were actually correct, and I knew enough to validate them. By Q1 2026, the numbers were in: across 91 engineers, I had generated nearly <strong>2× the agent lines of code</strong> of the second-ranked engineer.</p>
-    <div className="ai-metrics">
-      <div className="ai-metric"><div className="ai-metric-val">12,550</div><div className="ai-metric-label">Accepted Diffs</div></div>
-      <div className="ai-metric"><div className="ai-metric-val">5,984</div><div className="ai-metric-label">Tab Completions</div></div>
-      <div className="ai-metric"><div className="ai-metric-val">641K</div><div className="ai-metric-label">Agent Lines of Code</div></div>
-    </div>
-    <p className="ai-footnote">Tool: Cursor AI (composer-1) · Org: Xoxoday · 91 engineers · Aug 2025 – Apr 2026. Accepted diffs matter most — code good enough to actually ship.</p>
-  </div>
-</section>
-
-<div className="section-divider"><hr /></div>
-
-<section className="port-section" id="projects">
-  <p className="section-label reveal">Selected Projects &amp; Experiments</p>
-  <div className="projects-grid">
-    <a href="https://news.arghyadeep.com" target="_blank" rel="noopener noreferrer" className="project-card reveal">
-      <div className="project-title">MicroNEWZY</div>
-      <p className="project-desc">Short news service experiment exploring micro-content consumption, navigation, and performance trade-offs on the web.</p>
-      <span className="project-link">Visit ↗</span>
-    </a>
-    <div className="project-card reveal">
-      <div className="project-title">YouTube Tutorial Maker</div>
-      <p className="project-desc">Web app to record screen and camera together with offline support and PWA experience — making it easy to produce developer tutorials without heavyweight tooling.</p>
-    </div>
-    <a href="https://youtu.be/fqwuPihkIi4" target="_blank" rel="noopener noreferrer" className="project-card reveal">
-      <div className="project-title">Google Lens-like Text Recognition</div>
-      <p className="project-desc">React Native demo performing text recognition similar to Google Lens — experimenting with on-device scanning and UX around camera flows.</p>
-      <span className="project-link">Watch demo ↗</span>
-    </a>
-    <a href="https://www.linkedin.com/feed/update/urn:li:activity:6720534691264516096" target="_blank" rel="noopener noreferrer" className="project-card reveal">
-      <div className="project-title">Twitter UI in ReactJS</div>
-      <p className="project-desc">Rebuilt core Twitter UI patterns in ReactJS to deepen understanding of component composition, layout, and interactive feed performance.</p>
-      <span className="project-link">View ↗</span>
-    </a>
-    <div className="project-card project-card-wide reveal">
-      <div className="project-title">Other Experiments</div>
-      <p className="project-desc">Stock Android-style calculator for the web · QR Gate Pass · Barcode Warranty Verifier · Complaco (multi-platform document storage) · Several WebRTC/WebSocket-based apps exploring real-time UX and reliability challenges.</p>
-    </div>
-  </div>
-</section>
-
-<div className="section-divider"><hr /></div>
-
-<section className="port-section">
-  <p className="section-label reveal">A Few Recognitions</p>
-  <div className="recognition-list">
-    <div className="recognition-item reveal">
-      <div>
-        <div className="recognition-title">Impact in the Shadows · Circle of Excellence · Rockstar Awards</div>
-        <div className="recognition-org">Recognized for leading critical deliveries, shipping complex solutions under tight timelines, and driving high-impact features into production.</div>
+  <section className="port-section">
+    <h2 className="section-heading reveal">Impact Stories</h2>
+    <div className="impact-list">
+      <div className="impact-item reveal">
+        <span className="impact-num">01</span>
+        <p className="impact-text">Led a <strong>3-month migration</strong> of a production mobile app from Flutter to React Native (Expo + Hermes) with a 2-developer team — migrating 1000+ files and 500+ components, using AI tooling to replace months of manual engineering work.</p>
       </div>
-      <span className="recognition-badge">Xoxoday</span>
-    </div>
-    <div className="recognition-item reveal">
-      <div>
-        <div className="recognition-title">HackerRank Certifications</div>
-        <div className="recognition-org">JavaScript &amp; React</div>
+      <div className="impact-item reveal">
+        <span className="impact-num">02</span>
+        <p className="impact-text">Owned a <strong>large-scale survey stack for 4+ years</strong> — from microservices and MongoDB pipelines to UI, reliably handling 100K+ survey users and high-volume response processing as adoption grew.</p>
       </div>
-      <span className="recognition-badge">HackerRank</span>
-    </div>
-    <div className="recognition-item reveal">
-      <div>
-        <div className="recognition-title">Employee of the Year &amp; Cheers to Peers</div>
-        <div className="recognition-org">Jointly selected Employee of the Year (2019–2020) · 50+ peer recognitions for collaboration and delivery.</div>
+      <div className="impact-item reveal">
+        <span className="impact-num">03</span>
+        <p className="impact-text">Helped shape engagement experiences across surveys, rewards, social, wellness, and mobile — working closely with product, design, and customer teams to ship the <strong>right abstractions</strong>, not just close tickets.</p>
       </div>
-      <span className="recognition-badge">SKaaS</span>
+      <div className="impact-item reveal">
+        <span className="impact-num">04</span>
+        <p className="impact-text">Built a <strong>collaborative online interview platform in 3 weeks</strong> during COVID — with shared cursors, WebRTC audio/video, live chat, and automatic test-case validation. Used by companies for real technical hiring.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<div className="section-divider"><hr /></div>
+  <hr className="section-divider" />
 
-<section className="port-section" id="consulting">
-  <div className="consulting-inner">
-    <h2 className="consulting-heading reveal">Available for consulting &amp; collaboration</h2>
+  <section className="port-section" id="ai-story">
+    <div className="ai-section reveal">
+      <p className="ai-label">AI Adoption Story</p>
+      <p className="ai-quote">Ranked #1 on my org's AI usage leaderboard out of 91 engineers.</p>
+      <p className="ai-body">When AI coding tools rolled out across the org, most engineers tried them. I rewired how I work around them — making AI a daily collaborator across architecture, code review, debugging, and migrations. Not a shortcut. A <em>thinking partner</em>. Prompt crafting, context management, and knowing <em>when not to trust the model</em> started compounding — I was shipping more, faster, without cutting corners on quality. Accepted diffs climbed because the suggestions were actually correct, and I knew the codebase well enough to validate them. By Q1 2026, the numbers were in: across 91 engineers, I had generated nearly <strong>2× the agent lines of code</strong> of the second-ranked engineer.</p>
+      <div className="ai-metrics">
+        <div className="ai-metric"><div className="ai-metric-val">12,550</div><div className="ai-metric-label">Accepted Diffs</div></div>
+        <div className="ai-metric"><div className="ai-metric-val">5,984</div><div className="ai-metric-label">Tab Completions</div></div>
+        <div className="ai-metric"><div className="ai-metric-val">641K</div><div className="ai-metric-label">Agent Lines of Code</div></div>
+      </div>
+      <p className="ai-footnote">Tool: Cursor AI (composer-1) · Org: Xoxoday · 91 engineers · Aug 2025 – Apr 2026. Accepted diffs matter most — code good enough to actually ship.</p>
+    </div>
+  </section>
+
+  <hr className="section-divider" />
+
+  <section className="port-section" id="projects">
+    <h2 className="section-heading reveal">Projects</h2>
+    <div className="projects-list">
+      <a href="https://news.arghyadeep.com" target="_blank" rel="noopener noreferrer" className="project-item reveal">
+        <div>
+          <div className="project-title">MicroNEWZY</div>
+          <p className="project-desc">Short news service experiment exploring micro-content consumption, navigation, and performance trade-offs on the web.</p>
+        </div>
+        <span className="project-arrow">↗</span>
+      </a>
+      <div className="project-item reveal">
+        <div>
+          <div className="project-title">YouTube Tutorial Maker</div>
+          <p className="project-desc">Web app to record screen and camera together with offline support and PWA experience — making it easy to produce developer tutorials without heavyweight tooling.</p>
+        </div>
+      </div>
+      <a href="https://youtu.be/fqwuPihkIi4" target="_blank" rel="noopener noreferrer" className="project-item reveal">
+        <div>
+          <div className="project-title">Google Lens-like Text Recognition</div>
+          <p className="project-desc">React Native demo performing text recognition similar to Google Lens — experimenting with on-device scanning and UX around camera flows.</p>
+        </div>
+        <span className="project-arrow">↗</span>
+      </a>
+      <a href="https://www.linkedin.com/feed/update/urn:li:activity:6720534691264516096" target="_blank" rel="noopener noreferrer" className="project-item reveal">
+        <div>
+          <div className="project-title">Twitter UI in ReactJS</div>
+          <p className="project-desc">Rebuilt core Twitter UI patterns in ReactJS to deepen understanding of component composition, layout, and interactive feed performance.</p>
+        </div>
+        <span className="project-arrow">↗</span>
+      </a>
+      <div className="project-item reveal">
+        <div>
+          <div className="project-title">Other Experiments</div>
+          <p className="project-desc">Stock Android-style calculator for the web · QR Gate Pass · Barcode Warranty Verifier · Complaco (multi-platform document storage) · Several WebRTC/WebSocket-based apps exploring real-time UX and reliability challenges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr className="section-divider" />
+
+  <section className="port-section">
+    <h2 className="section-heading reveal">Recognition</h2>
+    <div className="recognition-list">
+      <div className="recognition-item reveal">
+        <div>
+          <div className="recognition-title">Impact in the Shadows · Circle of Excellence · Rockstar Awards</div>
+          <div className="recognition-org">Leading critical deliveries, shipping complex solutions under tight timelines, and driving high-impact features into production.</div>
+        </div>
+        <span className="recognition-badge">Xoxoday</span>
+      </div>
+      <div className="recognition-item reveal">
+        <div>
+          <div className="recognition-title">HackerRank Certifications</div>
+          <div className="recognition-org">JavaScript & React</div>
+        </div>
+        <span className="recognition-badge">HackerRank</span>
+      </div>
+      <div className="recognition-item reveal">
+        <div>
+          <div className="recognition-title">Employee of the Year & Cheers to Peers</div>
+          <div className="recognition-org">Jointly selected Employee of the Year (2019–2020) · 50+ peer recognitions for collaboration and delivery.</div>
+        </div>
+        <span className="recognition-badge">SKaaS</span>
+      </div>
+    </div>
+  </section>
+
+  <hr className="section-divider" />
+
+  <section className="port-section" id="consulting">
+    <h2 className="section-heading reveal">Consulting</h2>
     <div className="consulting-body">
       <p className="reveal">Outside my role, I help teams and engineers with architecture reviews, career guidance, and practical advice on growing as a hands-on engineer.</p>
-      <p className="reveal">I'm available for consulting on <strong>product architecture</strong> and <strong>Senior / Staff IC career paths</strong>.</p>
-      <div className="hero-actions reveal">
+      <p className="reveal">Available for consulting on <strong>product architecture</strong> and <strong>Senior / Staff IC career paths</strong>.</p>
+      <div className="cta-row reveal">
         <a href="https://www.linkedin.com/in/argodeep" target="_blank" rel="noopener noreferrer" className="btn-primary">Get in touch →</a>
-        <a href="https://twitter.com/argodeep" target="_blank" rel="noopener noreferrer" className="btn-secondary">Twitter ↗</a>
+        <a href="https://twitter.com/argodeep" target="_blank" rel="noopener noreferrer" className="btn-ghost">Twitter ↗</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+</div>
 
 <footer className="port-footer">
   <div className="footer-inner">
@@ -398,9 +519,9 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
   });
-}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.06, rootMargin: '0px 0px -32px 0px' });
 reveals.forEach((el, i) => {
-  el.style.transitionDelay = (i % 4) * 60 + 'ms';
+  el.style.transitionDelay = (i % 4) * 55 + 'ms';
   observer.observe(el);
 });
 ` }} />
