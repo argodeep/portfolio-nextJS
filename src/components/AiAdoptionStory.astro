@@ -1,0 +1,43 @@
+---
+import Section from "./Section.astro";
+import type { AiAdoptionStoryProps } from "@types";
+
+type Props = AiAdoptionStoryProps;
+
+const { title, subtitle, description, metrics, details } = Astro.props;
+---
+
+<Section text={title} href="ai-adoption">
+  <div class="space-y-8">
+    {subtitle && (
+      <p class="text-lg font-medium text-primary">{subtitle}</p>
+    )}
+    
+    <p class="whitespace-pre-wrap text-base text-neutral leading-relaxed md:text-lg">
+      {description}
+    </p>
+
+    <div class="overflow-x-auto">
+      <table class="w-full">
+        <tbody>
+          {
+            metrics.map(({ label, value }) => (
+              <tr class="border-b border-neutral/20">
+                <td class="py-4 pr-6 text-base font-medium text-neutral">
+                  {label}
+                </td>
+                <td class="py-4 text-right text-2xl font-bold text-primary">
+                  {value}
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-base text-neutral leading-relaxed italic">
+      {details}
+    </p>
+  </div>
+</Section>

@@ -1,0 +1,25 @@
+---
+import { SITE_CONTENT } from "@config";
+import Hero from "@components/Hero.astro";
+import Layout from "@layouts/Layout.astro";
+import HowIWork from "@components/HowIWork.astro";
+import AiAdoptionStory from "@components/AiAdoptionStory.astro";
+import Experience from "@components/Experience.astro";
+import ImpactStories from "@components/ImpactStories.astro";
+import Projects from "@components/Projects.astro";
+import Recognitions from "@components/Recognitions.astro";
+import About from "@components/About.astro";
+
+import "../styles/global.css";
+---
+
+<Layout>
+  <Hero {...SITE_CONTENT.hero} />
+  <HowIWork {...SITE_CONTENT.howIWork} />
+  <AiAdoptionStory {...SITE_CONTENT.aiAdoptionStory} />
+  <Experience experience={SITE_CONTENT.experience} />
+  <ImpactStories stories={SITE_CONTENT.impactStories} />
+  <Projects projects={SITE_CONTENT.projects} />
+  <Recognitions recognitions={SITE_CONTENT.recognitions} />
+  <About {...SITE_CONTENT.about} name={SITE_CONTENT.hero.name} />
+</Layout>
