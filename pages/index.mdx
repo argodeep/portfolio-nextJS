@@ -2,17 +2,75 @@
 title: Arghyadeep Majumder | Senior Engineer & Solution Architect
 ---
 
-<img src="/dp.jpeg" alt="Arghyadeep Majumder" style={{ borderRadius: '50%', width: '120px', height: '120px', objectFit: 'cover' }} />
+<div className="hero">
+  <img src="/dp.jpeg" alt="Arghyadeep Majumder" />
+  <div className="hero-text">
+    <h1>Arghyadeep Majumder</h1>
+    <h3>Senior Engineer &amp; Solution Architect</h3>
+    <p>
+      Hi, I am <strong>Arghyadeep Majumder</strong>, a Senior Engineer &amp; Solution Architect currently
+      building <strong>Empuls</strong>, Xoxoday&apos;s employee engagement platform.
+    </p>
+    <p>
+      I have <strong>7+ years</strong> of experience designing and shipping products end to end — from
+      microservices to React/React Native frontends — for <strong>600K+ users across 1000+ global clients</strong>.
+    </p>
+    <p>
+      I enjoy turning ambiguous ideas into production systems, especially in <strong>surveys, rewards,
+      wellness, and mobile</strong>, and using <strong>AI tools as force multipliers</strong> to ship faster
+      without compromising quality.
+    </p>
+  </div>
+</div>
 
-# Arghyadeep Majumder
+<style jsx>{`
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
 
-### Senior Engineer & Solution Architect
+  .hero img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
 
-Hi, I am **Arghyadeep Majumder**, a Senior Engineer & Solution Architect currently building **Empuls**, Xoxoday's employee engagement platform.
+  .hero-text {
+    flex: 1;
+    min-width: 240px;
+  }
 
-I have **7+ years** of experience designing and shipping products end to end — from microservices to React/React Native frontends — for **600K+ users across 1000+ global clients**.
+  .hero-text h1 {
+    margin: 0 0 0.25rem 0;
+  }
 
-I enjoy turning ambiguous ideas into production systems, especially in **surveys, rewards, wellness, and mobile**, and using **AI tools as force multipliers** to ship faster without compromising quality.
+  .hero-text h3 {
+    margin: 0 0 0.75rem 0;
+    font-weight: 500;
+    color: #555;
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .hero img {
+      width: 140px;
+      height: 140px;
+    }
+
+    .hero-text {
+      text-align: left;
+    }
+  }
+`}</style>
 
 ---
 
