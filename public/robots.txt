@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /.astro/
+Disallow: /.git/
+
+Sitemap: https://arghyadeep.dev/sitemap.xml
