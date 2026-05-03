@@ -4,7 +4,7 @@ export const SITE_CONFIG: SiteConfig = {
   title: "Arghyadeep Majumder — Senior Engineer & Solution Architect",
   author: "Arghyadeep Majumder",
   description:
-    "Senior Engineer & Solution Architect with 7+ years of experience designing and shipping products end-to-end. Building scalable systems from microservices to React & React Native frontends for millions of users.",
+    "Senior Engineer & Solution Architect with 7+ years of experience building and shipping products end-to-end. Building scalable systems from microservices to React & React Native frontends for millions of users.",
   lang: "en",
   siteLogo: "/arghya-small.jpg",
   navLinks: [
@@ -155,7 +155,7 @@ export const SITE_CONTENT: SiteContent = {
       summary: [
         "Led delivery of a new Empuls mobile app using Expo + React Native in 3 months with a 2-developer team, migrating 1000+ files and 500+ components from Flutter to a Hermes-based React Native stack, heavily leveraging AI tools (Cursor) to replace months of engineering effort with a modest AI investment.",
         "Revamped the Empuls Store Catalog UI for desktop and mobile within the rewards marketplace, delivering a cleaner experience that boosted mobile adoption from 10% to 25% and has been maintained and evolved over 5+ years.",
-        "Own the Empuls employee survey stack for 4+ years, designing and maintaining backend microservices, nano-services/jobs, MongoDB pipelines, and survey scheduling systems, along with the frontend UI, to reliably handle 100K+ survey users and high-volume response processing as adoption scaled.",
+        "Own the Empuls employee survey stack for 4+ years, building and maintaining backend microservices, nano-services/jobs, MongoDB pipelines, and survey scheduling systems, along with the frontend UI, to reliably handle 100K+ survey users and high-volume response processing as adoption scaled.",
       ],
     },
     {
