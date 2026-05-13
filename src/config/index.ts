@@ -29,7 +29,7 @@ export const SITE_CONTENT: SiteContent = {
     name: "Arghyadeep Majumder",
     specialty: "Senior Engineer & Solution Architect",
     summary:
-      "I care about what I build —and I try to build it well.\n\nI have 7+ years of experience designing and shipping products end to end, in production. From microservices to React & React Native frontends — for millions of users across global enterprises and clients. Every layer, every cycle.\n\nCurrently building Empuls, Xoxoday's employee engagement platform — across surveys, rewards, wellness, and mobile — using AI tools as force multipliers to ship faster without compromising quality.",
+      "I care about what I build —and I try to build it well.\n\nI have 7+ years of experience building and shipping products end to end, in production. From microservices to React & React Native frontends — for millions of users across global enterprises and clients. Every layer, every cycle.\n\nCurrently building Empuls, Xoxoday's employee engagement platform — across surveys, rewards, wellness, and mobile — using AI tools as force multipliers to ship faster without compromising quality.",
     email: "ask@arghyadeep.com",
   },
   howIWork: {
