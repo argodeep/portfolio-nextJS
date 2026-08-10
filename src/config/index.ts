@@ -134,6 +134,12 @@ export const SITE_CONTENT: SiteContent = {
       company: "SKaaS",
     },
     {
+      title: "React Bangalore Meetup #105",
+      description:
+        "Hosted and MC’d a React Native meetup attended by 120+ engineers, sharing practical AI-assisted migration workflows and community leadership insights.",
+      company: "React Bangalore",
+    },
+    {
       title: "Talk Proposal - Text Detection with AWS Rekognition",
       description:
         "This talk shows how to use text recognition feature in a react native app similar to google lens",
@@ -230,12 +236,12 @@ export const SITE_CONTENT: SiteContent = {
     },
   ],
   consulting: {
-    description: "I am currently open to Senior Software Engineer roles with remote-first teams, especially EU engineering teams in Germany or the Netherlands. Let's build something fast.",
-    availability: "Open to remote-first EU roles",
+    description: "I am currently open to Senior Software Engineer roles with remote-first or hybrid teams. Let's build something fast.",
+    availability: "Open to remote-first and hybrid roles",
   },
   about: {
     description: `
-      I am currently open to Senior Software Engineer roles with remote-first teams, especially EU engineering teams in Germany or the Netherlands. Let's build something fast.
+      I am currently open to Senior Software Engineer roles with remote-first or hybrid teams. Let's build something fast.
     `,
     image: "/arghya.jpg",
   },
