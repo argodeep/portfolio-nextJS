@@ -1,10 +1,10 @@
 import type { SiteConfig, SiteContent } from "../types";
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Arghyadeep Majumder — Senior Engineer & Solution Architect",
+  title: "Arghyadeep Majumder — Senior Software Engineer",
   author: "Arghyadeep Majumder",
   description:
-    "Senior Engineer & Solution Architect with 7+ years of experience building and shipping products end-to-end. Building scalable systems from microservices to React & React Native frontends for millions of users.",
+    "Senior Software Engineer with 7+ years of experience building and shipping products end-to-end. Building scalable systems from microservices to React & React Native frontends for millions of users.",
   lang: "en",
   siteLogo: "/arghya-small.jpg",
   navLinks: [
@@ -27,7 +27,7 @@ export const SITE_CONFIG: SiteConfig = {
 export const SITE_CONTENT: SiteContent = {
   hero: {
     name: "Arghyadeep Majumder",
-    specialty: "Senior Engineer & Solution Architect",
+    specialty: "Senior Software Engineer",
     summary:
       "I care about what I build —and I try to build it well.\n\nI have 7+ years of experience building and shipping products end to end, in production. From microservices to React & React Native frontends — for millions of users across global enterprises and clients. Every layer, every cycle.\n\nCurrently building Empuls, Xoxoday's employee engagement platform — across surveys, rewards, wellness, and mobile — using AI tools as force multipliers to ship faster without compromising quality.",
     email: "ask@arghyadeep.com",
@@ -217,6 +217,11 @@ export const SITE_CONTENT: SiteContent = {
       linkSource: "https://www.linkedin.com/feed/update/urn:li:activity:6720534691264516096",
     },
     {
+      name: "multi-repo-merge",
+      summary:
+        "Built a custom Claude AI skill for cross-microservice deployment validation and merge orchestration across multiple repositories, proving enterprise-scale AI augmentation in developer workflows.",
+    },
+    {
       name: "Other Experiments",
       summary:
         "Shipped smaller tools like a stock Android-style calculator for the web, a QR Gate Pass, a Barcode Warranty Verifier, Complaco (multi-platform document storage), and several WebRTC/WebSocket-based apps to explore real-time UX and reliability challenges.",
@@ -225,12 +230,12 @@ export const SITE_CONTENT: SiteContent = {
     },
   ],
   consulting: {
-    description: "Available for consulting on product architecture and Senior/Staff IC career paths.",
-    availability: "Select engagements",
+    description: "I am currently open to Senior Software Engineer roles with remote-first teams, especially EU engineering teams in Germany or the Netherlands. Let's build something fast.",
+    availability: "Open to remote-first EU roles",
   },
   about: {
     description: `
-      Outside my role, I help teams and engineers with architecture reviews, career guidance and practical advice on growing as a hands-on engineer. I'm available for consulting on product architecture and Senior/Staff IC career paths.
+      I am currently open to Senior Software Engineer roles with remote-first teams, especially EU engineering teams in Germany or the Netherlands. Let's build something fast.
     `,
     image: "/arghya.jpg",
   },

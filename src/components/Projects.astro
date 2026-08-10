@@ -18,15 +18,18 @@ const { projects } = Astro.props;
             {name}
           </h3>
           <p class="mb-6 text-base text-neutral">{summary}</p>
-          <div class="flex gap-5 text-white">
-            <a
-              href={linkSource}
-              target="_blank"
-              class="after:relative after:-bottom-1.25 after:content-[url(/external.svg)] hover:underline"
-            >
-              Source
-            </a>
-          </div>
+          {linkSource && (
+            <div class="flex gap-5 text-white">
+              <a
+                href={linkSource}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="after:relative after:-bottom-1.25 after:content-[url(/external.svg)] hover:underline"
+              >
+                Source
+              </a>
+            </div>
+          )}
         </div>
       );
     })
