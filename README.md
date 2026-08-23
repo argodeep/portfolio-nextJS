@@ -1,35 +1,83 @@
-# AstroZen - Personal Portfolio Website
+# Arghyadeep Majumder — Portfolio
 
-AstroZen is a minimalist, accessible and responsive portfolio template for your personal portfolio website. It is built with Astro and TailwindCSS.
+A personal portfolio site built with Astro, Tailwind CSS, and TypeScript to showcase engineering leadership, product impact, and hands-on software delivery. The content reflects the live profile of a Senior Software Engineer and Tech Lead working across backend systems, React, React Native, and enterprise product platforms.
 
-![zen-og](https://github.com/user-attachments/assets/7a72aaae-6652-4cd0-becc-8e6a3c224993)
+## About
 
-> [!NOTE]
-> The information contained in this template, including names, images, and content, is entirely fictitious and is intended solely to give the design a realistic appearance. Any coincidence with real-life people, events, or situations is purely coincidental. It is recommended that you replace this information with your own information.
+I am Arghyadeep Majumder, a Senior Software Engineer and Tech Lead with 7+ years of experience building and shipping products end-to-end. My work spans backend systems, React and React Native frontends, mobile apps, and product experiences for large-scale enterprise platforms.
 
-## 🔥 Features
+This portfolio highlights:
 
-- [x] Minimalist design. clean and simple
-- [x] Mobile-first responsive layout
-- [x] SEO-friendly and accessible
-- [x] Easy to customize with a single configuration file
+- engineering leadership and product ownership
+- scalable system design and microservice work
+- React, React Native, and Expo-based product delivery
+- AI-assisted development workflows and shipping velocity
+- key projects, recognitions, and experience history
 
-## ✅ Lighthouse Score
+## Tech Stack
 
-![performance](https://github.com/user-attachments/assets/4f95e2ca-03f9-4996-9e34-dcd179194c58)
+- Astro
+- TypeScript
+- Tailwind CSS
+- Vite
+- pnpm
 
-## 🚀 Getting Started
+## Features
 
-Clone this repository to your local machine using Git.
+- responsive portfolio layout
+- accessible, SEO-friendly structure
+- modular content-driven design with central site configuration
+- sections for experience, impact, projects, recognitions, and about
+- easy customization through configuration and content data
 
-```scheme
-git clone https://github.com/immois/astro-zen.git
-cd astro-zen
+## Local Development
+
+```bash
+git clone https://github.com/argodeep/portfolio-nextJS.git
+cd portfolio-nextJS
+pnpm install
+pnpm dev
 ```
 
-| Command        | Action                                       |
-| :------------- | :------------------------------------------- |
-| `pnpm install` | Installs dependencies                        |
-| `pnpm dev`     | Starts local dev server at `localhost:4321`  |
-| `pnpm build`   | Build your production site to `./dist/`      |
-| `pnpm preview` | Preview your build locally, before deploying |
+Then open:
+
+- http://localhost:4321
+
+## Available Scripts
+
+```bash
+pnpm dev      # start local development server
+pnpm build    # run Astro type check and generate production build
+pnpm preview  # preview the production build locally
+```
+
+## Project Structure
+
+```text
+portfolio-nextJS/
+├── public/              # static assets and images
+├── src/
+│   ├── components/      # page sections and reusable UI
+│   ├── config/          # site metadata and content
+│   ├── layouts/         # page layout wrappers
+│   ├── pages/           # Astro pages
+│   ├── styles/          # global styling
+│   └── types/           # TS types
+├── astro.config.mjs
+├── package.json
+├── pnpm-lock.yaml
+├── tsconfig.json
+├── README.md
+└── vercel.json
+```
+
+## Deployment
+
+This project is designed for deployment on platforms like Vercel or similar static hosting providers. The config includes standard Astro output support and Vercel settings.
+
+## Contact
+
+- Email: ask@arghyadeep.com
+- GitHub: https://github.com/argodeep
+- LinkedIn: https://linkedin.com/in/argodeep
+- X: https://x.com/argodeep
